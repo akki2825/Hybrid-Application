@@ -1,0 +1,65 @@
+
+<ion-view>
+  <ion-header-bar class="bar-stable" style="background-color:#00a4b9;height:60px;">
+      <div>
+      <center>
+        <p class = "title" style="font-size:25px;color:white; padding-top:7px;">StapleToday</p>
+      </center>
+      </div>
+  </ion-header-bar>
+
+  <ion-content overflow-scroll=false style="width: 100%;" class="has-header">
+  
+  
+    <div class="col col-100">
+  
+      <div class="row header" style="margin-top:30px;">
+
+          <div class="col col-40 content" align="center"><font style="font-size:12px">Name</font></div>
+          <div class="col col-20 content" align="center"> <font style="font-size:12px">Size</font></div>
+          <div class="col col-20 content" align="center"><font style="font-size:12px">Quantity</font></div>
+          <div class="col col-20 content" align="center"><font style="font-size:12px">Price</font></div>
+          <!-- <div class="col"></div> -->
+        </div>
+      <div class = "row" ng-repeat="o in details">
+        
+        <div class="col col-40 content" align="center" style="line-height:10px;">
+          <font style="font-size:8px">{{o.Product_Name}}</font>
+      </div>
+      <div class="col col-20 content" align="center" style="line-height:10px;">
+        <font style="font-size:8px">{{o.Product_Size}}</font>
+    </div>
+      <div class="col col-22 content" align="center" style="line-height:10px;">
+        <font style="font-size:8px">{{o.Number_Item}}</font>
+    </div>
+    <div class="col col-20 content" align="center" style="line-height:10px;">
+      <font style="font-size:8px"><i class="fa fa-inr"></i>&nbsp;{{o.Product_Price}}</font>
+    </div>
+     
+     <br>
+    
+    
+    <ionic-footer-bar>
+
+    <button  ng-hide="settlebuttonpending"   class= "bar bar-footer customBar" ng-click="settle(o.Order_ID)" >
+     <h1 class="title" style="color:white;">Settle</h1>
+    </button>
+     <button  ng-show="settlebuttondelivery" ng-disabled="settlebuttondelivery"    class= "bar bar-footer " style="background-color:#d3d3d3" ng-click="settle(o.Order_ID)" >
+     <h1 class="title" style="color:white;">Settle</h1>
+    </button>
+    </ionic-footer-bar>
+    </div> 
+
+    <div align="right" style="margin-right:30px;">
+      
+    <font style="font-size:15px">Total Amount: <i class="fa fa-inr"></i>&nbsp;{{amount}}</font>
+    </div>
+    </div>
+    </ion-content>
+</ion-view>
+
+<script type="text/javascript">
+  
+ 
+
+</script>

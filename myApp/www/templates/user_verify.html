@@ -1,0 +1,39 @@
+<ion-view hide-nav-bar="true">
+  <ion-content>
+    <div style="background-color:#00a4b9; width=100%; height:140px;">
+      <br><br><br>
+    <p style="text-align:center; font-size:30px;color:white;">
+      StapleToday</p>
+</div>
+ <br>
+ <center>
+   <p style="text-align:center;color:grey;font-size:12px"> Enter the OTP to verify your phone number</p> </center>
+    <form style="bg-color:#FFFFFF">
+    <div class ="row">
+      <div class = "col col-20" style=" height:70px" >
+                  <span class="input-label" style=" width:100%; height:100%" align="right"></span>
+                   <input type="tel" size="16"
+                    style="background-color:inherit" disabled>
+
+                </div>&nbsp;
+
+      <div class = "col"  style=" height:70px">
+ <label class="item item-input" style="height:50px; width:190px;background-color:transparent;border-top:none;border-right:none;border-left:none;border-bottom:1px solid;color:grey">
+
+        <input type="tel" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter OTP" ng-model="otp"
+         maxlength="4" ng-minlength="4"  style="font-size:15px; text-align: center;" >
+       </label>
+     </div>
+   </div>
+ </div>
+<div class = "row">
+  <div class ="col" align="center">
+ <p> <button class="button button-small" style="width:100px; background-color:#149671; color:white;" ng-click="UserOtp(otp)">Confirm</button>
+ </p>
+ </div>
+</div>
+
+
+  </form >
+  </ion-content>
+</ion-view>

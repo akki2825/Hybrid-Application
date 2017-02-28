@@ -1,0 +1,90 @@
+<script>
+button-xsmall {
+  padding: '2px' '4px' '1px';
+  min-width: '30px';
+  min-height: '20px';
+  font-size: '12px';
+  line-height: '26px'; }
+</script>
+
+
+
+
+<ion-view title="Staple">
+ 
+  <ion-content>
+  <div style="background-color:#00a4b9; width:100%; height:60px;">
+      
+    <p style="text-align:center; font-size:25px;color:white; padding-top:20px;">
+      StapleToday</p>
+</div>
+  <div class="col col-100">
+      
+        <div class="row" style="margin-top:8px;">
+             
+              <label class="item item-input  col col-40" style="width:100px;position:relative;float:left;height:30px;margin-left:0px; padding-top:0px">
+               
+               <button class="button button-small" style="position:relative;float:right;" ng-click="openDatePicker()" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+               <h3 style="text-align:center;padding-top:8px">{{ ab | date: "yyyy/MM/dd"}}</h3>
+            </label>
+  
+              <label class="item item-input col col-40" style="width:100px;height:30px;padding-top:0px;">
+               
+               <button class="button button-small" style="position:relative;float:right" ng-click="mytodate()" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+               <h3 style="text-align:center;padding-top:8px">{{ ba | date: "yyyy/MM/dd"}}</h3>
+            </label>
+            <button class="button button-small" style="position:relative;float:right;width:60px;height:30px;margin-left:4px;background-color:#149671;color:white;margin-top:-1px;" ng-click = "date()">GO!</button>
+          </div>
+
+      </div>
+    <ion-list ng-repeat = "o in pending track by $index">
+      
+      <hr>
+          <a ng-click="orderdetails({{o.Order_ID}})">
+            <div ng-disabled = 'disable' class="col col-50" style=" margin-top:-10px;margin-left:250px;">
+              <label style="width:100px;border-bottom: 1px solid  #000; padding-bottom: 1px;color:black; font-size: 13px; " ng-click="maps()"><i class="fa fa-location-arrow" aria-hidden="true"></i>&nbsp;&nbsp;Navigate</label>
+            </div>
+          
+        <div class="row" >
+          
+          <div class="col col-50" style="height:50%;margin-top:-0.8em">
+            <p style="margin-bottom:-7px;font-size:11px;color:black"><font style="font-size:10px; color:grey;">Name:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{o.First_Name}}</p>
+            <!-- <font style="font-size:10px"><i class="fa fa-building"></i>&nbsp;This is checking for address</font><br> -->
+            <p style="font-size:11px;margin-bottom:-7px;color:black"><font style="font-size:10px;color:grey">Mobile:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Mobile}}</p>
+            <p style="margin-bottom:8px;font-size: 11px;color:black"><font style="font-size:10px;color:grey">Locality:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Locality}}</p>
+            <p  style="font-size:11px;margin-bottom:-7px;color:black"><font style="font-size:10px;color:grey">Delivery Date:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Delivery_Date}}</p>
+            <p style="font-size:11px;color:black"><font style="font-size:10px;color:grey">Delivery Time:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Delivery_Time}}</p>
+            
+
+            
+          </div>
+        <div class="col col-50" style="background-color:white;height:100%;margin-top:-0.8em;margin-left:10px">
+          
+          
+      
+          <p style="font-size:11px;margin-bottom:-7px;color:black"><font style="font-size:10px;color:grey">Payment Mode:</font>&nbsp;&nbsp;&nbsp;&nbsp;{{o.Payment_Mode}} </font></p>
+          <p style="font-size:11px;margin-bottom:21px;color:black"><font style="font-size:10px;color:grey">Payment Status:</font>&nbsp;&nbsp;&nbsp;{{o.Payment_Status}}  </p>
+            
+          <p style="font-size:11px;color:black;margin-bottom:-7px;"><font style="font-size:10px; color:grey">Total Items:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Item_Count}}</p>    
+          <p style="font-size:11px;color:black;"><font style="font-size:10px;color:grey">Amount</font>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-inr"></i>{{o.Total_Amount}}</p>
+      </div>
+    </div>
+    
+    
+    <!-- <div class="col col-33">
+      <label class= "button button-stable button-small button-outline" style="width:100%" ng-click="settle($index)"> Settle</label>
+    </div>
+ --><div  style="margin-left:10px;margin-right:10px;margin-top:-13px;height:20%">
+      <p style="font-size:11px;color:black;"> <font style="font-size:10px;color:grey">Address:</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{o.Address}}. {{o.City}}-{{o.Pincode}}</p>
+    </div>    
+    <div class="col col-33" style=" margin-top:-25px;margin-left:265px;">
+      <label  style="width:100px;color:black; font-size: 13px; " ng-click="orderdetails({{o.Order_ID}})"> Details&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></label>
+
+    </div>
+      </a>
+      
+        <hr>
+      </ion-list>
+
+  </ion-content>
+</ion-view>

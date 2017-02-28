@@ -1,0 +1,52 @@
+/* Empty. Add your own CSS if you like */
+.myfont{
+  font-size:80%;
+  font-color:white;
+  font-face:verdana;
+}
+
+.pending {
+  width: 100%;
+  margin-top: 10px;
+  height: 130px;
+  background-color: #EEEEEE;
+  border: none;
+}
+
+.orders-delivered {
+  width: 160px;
+  height: 130px;
+  background-color: #EEEEEE;
+  margin-top: -1.3em;
+  padding-top: 30px;
+
+  /*padding: 45px 20px 30px 35px;*/
+  /*color: #fff;*/
+  font-family: sans-serif;
+  font-size: 120%;
+  border: none;
+}
+.my-container {
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+}
+.scroll{
+  min-height: 100% !important;
+  height: 100% !important;
+}
+.popup-head {
+  background-color: #00a4b9;
+
+}
+.popup-title {
+  color: white;
+}
+.popup-buttons .button.activated {
+
+    background-color: #149671;
+}
+div.footer-button a.button.button-full {
+    width:100%;
+    margin-top: 0
+}

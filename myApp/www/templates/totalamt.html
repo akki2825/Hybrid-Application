@@ -1,0 +1,90 @@
+<ion-view title="Staple">
+  
+  <ion-content>
+  <div style="background-color:#00a4b9; width:100%; height:60px;">
+      
+    <p style="text-align:center; font-size:25px;color:white; padding-top:20px;">
+      StapleToday</p>
+</div>
+    
+  
+    <center style="margin-top:50px;">
+      <div>
+        <h4>Select a duration to view the Amount</h4>
+      </div>
+    
+    <br>
+    <br>
+    
+    <div class="col col-100">
+      
+        <div class="row">
+             
+              <label class="item item-input  col col-40" style="width:100px;position:relative;float:left;height:30px;margin-left:0px; padding-top:0px">
+               
+               <button class="button button-small" style="position:relative;float:right;" ng-click="openDatePicker()" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+               <h3 style="text-align:center;padding-top:8px">{{ ab | date: "dd/MM/yyyy"}}</h3>
+            </label>
+  
+              <label class="item item-input col col-40" style="width:100px;height:30px;padding-top:0px;">
+               
+               <button class="button button-small" style="position:relative;float:right" ng-click="mytodate()" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+               <h3 style="text-align:center;padding-top:8px">{{ ba | date: "dd/MM/yyyy"}}</h3>
+            </label>
+            <button class="button button-small" style="position:relative;float:right;width:60px;height:30px;margin-left:4px;background-color:#149671;color:white;margin-top:-1px;" ng-click="date()">GO!</button>
+          </div>
+
+      </div>
+      <br>
+      <br>
+      <center>
+      <h2><strong>Total Amount</strong></h2>
+      
+      </center>
+      <br>
+      <p > <i class="fa fa-inr fa-4x"></i>&nbsp;&nbsp;<strong style="font-size:50px;">{{time.amount}}</strong></p> 
+      
+
+  <!-- <div class="row" style="margin-left: 20px;">
+  <p class="col col-33">From :&nbsp;</p> 
+  <label class="item item-input item-stacked-label col col-50" style="width:200px;margin-left:-29px;margin-top:-10px;height:50px;">
+   
+   <button class="button button-small" style="position:relative;float:right;" ng-click="openDatePicker()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+   <h3 style="text-align:center;padding-top:10px">{{ ab | date: "dd/MM/yyyy"}}<h3>
+</label>
+  </div>
+  <br>
+  <div class="row" style="margin-left: 20px;">
+  <p class="col col-33">&nbsp;&nbsp;&nbsp;&nbsp;To :&nbsp;</p> 
+  <label class="item item-input item-stacked-label col col-50" style="width:200px;margin-left:-29px;margin-top:-10px;height:50px;">
+   
+   <button class="button button-small" style="position:relative;float:right;" ng-click="mytodate()" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+   <h3 style="text-align:center;padding-top:10px">{{ ba | date: "dd/MM/yyyy" }}<h3>
+</label>
+  </div>
+
+
+
+
+  <br>
+  <br>
+  <ion-footer-bar >
+    <div ng-click="openModal($index)" style="width:110%; margin-left:-6px;">
+      <button class="btn input-block-level" style="width: 104%; background-color:#149671; color:white;" >Submit</button>  
+    </div>
+  </ion-footer-bar>
+  </ion-content>
+  <script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+      <div style="background-color:#00a4b9; width:100%; height:40px;">
+      
+          <p style="text-align:center; font-size:20px;color:white; padding-top:8px;">StapleToday</p>
+      </div>
+      <br>
+      <br>
+      <center>
+      <h4>  <strong>Total</strong>&nbsp;:&nbsp;&nbsp;<i class="fa fa-inr"></i>&nbsp;<strong>Amount</strong></font></h4> 
+      </center>     
+  </ion-modal-view>
+  </script> -->
+</ion-view>
